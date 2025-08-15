@@ -459,6 +459,7 @@ int main(int argc, char **argv) {
                     return -1;
                 }
                 params_config.num_players = players;
+                break;
             }
             case 'l': {
                 int loop = atoi(optarg);
@@ -467,6 +468,7 @@ int main(int argc, char **argv) {
                     return -1;
                 }
                 params_config.loops = loop;
+                break;
             }
             case 'a': {
                 int c = atoi(optarg);
@@ -475,6 +477,7 @@ int main(int argc, char **argv) {
                     return -1;
                 }
                 params_config.test_card1 = c;
+                break;
             }
             case 'b': {
                 int c = atoi(optarg);
@@ -483,6 +486,7 @@ int main(int argc, char **argv) {
                     return -1;
                 }
                 params_config.test_card2 = c;
+                break;
             }
             case 'h': {
                 usage();
@@ -550,7 +554,7 @@ int main(int argc, char **argv) {
         }
 #endif 
     }
-    std::cout << std::dec << "win: " << wins << "/" << params_config.loops << "both wins: " << both_wins << "/" << wins << std::endl;
+    std::cout << std::dec << "win: " << wins << "/" << params_config.loops << " both wins: " << both_wins << "/" << wins << std::endl;
 
 #if 0
     test_scores();
