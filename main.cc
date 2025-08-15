@@ -484,7 +484,7 @@ int main(int argc, char **argv) {
                 }
                 params_config.test_card2 = c;
             }
-            case '?': {
+            case 'h': {
                 usage();
                 return 0;
             }
